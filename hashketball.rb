@@ -115,7 +115,7 @@ def game_hash
           blocks: 5,
           slam_dunks: 12
         }, {
-          player_name = "Kemba Walker",
+          player_name: "Kemba Walker",
           number: 33,
           shoe: 15,
           points: 6,
