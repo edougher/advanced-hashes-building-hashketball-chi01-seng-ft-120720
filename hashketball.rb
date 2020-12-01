@@ -131,16 +131,12 @@ def game_hash
 end
 
 def num_points_scored(player_name)
-  # SOLUTION 3
-   # get a list of all the players
-   all_players = game_hash.values.collect do |team|
-     team[:players]
-   end.flatten
-
-   # find the player whose name matches the argument 'player_name'
-   # return that player's points
-   all_players.each do |player|
-     return player[:points] if player[:player_name] == player_name
-   end
+  game_hash.each do |team, team_data|
+       team_data[:players].each do |player|
+         if player[:player_name] == player_name
+           return player[:points]
+        end
+       end
+     end
  end
  num_points_scored("Mason Plumlee")
