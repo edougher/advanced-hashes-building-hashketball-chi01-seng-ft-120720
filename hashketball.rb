@@ -133,3 +133,4 @@ def num_points_scored(player_name)
      return player[:points] if player[:player_name] == player_name
    end
  end
+ num_points_scored("Mason Plumlee")
